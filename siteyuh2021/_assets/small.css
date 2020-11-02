@@ -1,0 +1,37 @@
+/*small.css*/
+footer .wrapper, #eventlist .wrapper, #catevents .wrapper, #sent .wrapper {
+  width: min(100%, 350px);
+  
+}
+#cat .catmem {
+  width: 270px;
+  margin: 25px auto 0px;
+}
+
+#gallery .descr {
+  position: absolute;
+  bottom: 0;
+}
+
+.eventname, .description, #photomember .small {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#eventlist ul li, #catevents ul li {
+  width: calc(50% - 4px);
+}
+#profile, #information, #mailform {
+  width: min(80%, 800px);
+}
+
+#mailform li a {
+/*  padding: 8px auto;*/
+}
+
+#gallery .carousel {
+  height: 375px;
+}
+ul.thumbnails li {
+  margin: 0px 0.5px -3px!important;
+}

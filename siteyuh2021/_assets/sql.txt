@@ -1,0 +1,110 @@
+localhost/siteyuh/		http://siteyuh.s1001.xrea.com/log/phpmyadmin/sql.php?server=1&db=siteyuh&table=associate&pos=0&token=f88fc0abcbba7f337ef99ebac3e08c44
+
+
+ Showing rows 0 - 37 (38 total, Query took 0.0019 seconds.)
+
+SELECT associate.associateid, event.eventname, associate.categoryid FROM `associate`, `event` WHERE `event`.`eventid` = `associate`.`eventid`
+
+
+associateid	eventname	categoryid	
+1	LEOフォトセッション	3	
+2	2007年ホノルルマラソン	3	
+3	トップモードジャパンのマイクロビキニ	2	
+4	上向き収納のパンティ	1	
+5	メンズビキニドットコムの極小パンティ	1	
+6	エネマグラを使っておしりでオナニー	3	
+7	上向き収納のメタリックなGスト	1	
+8	中まで丸見え網パンティ	1	
+9	トップモードジャパンのGストの水着	2	
+10	M&apos;sの白いビキニ	2	
+11	レパード柄のGストのパンティ	1	
+12	コックリングでパンプアップ	3	
+13	プチ露出で興奮	3	
+14	隠すところは最小限なパンティ	1	
+15	PPGの普通のTバックパンティ	1	
+16	サイドレースのビキニ	2	
+17	ちっちゃいリオバックビキニ	2	
+18	オーソドックスなGストのパンティ	1	
+19	TM製オレンジ色のGストのパンティ	1	
+20	サスペンダータイプのパンティ	1	
+21	TopModeJapanのブルーのTバック	1	
+22	Tバックのスイムビキニ	2	
+23	サイドメッシュのビキニパンティ	1	
+24	3cmクロッチのリオバックビキニ	2	
+25	レディスっぽいハーフバックパンティ	1	
+26	前向きなGストリングパンティ	1	
+27	上向き収納の白いGスト	1	
+28	和柄の上向きGストパンティ	1	
+29	すけすけネットのGストパンティ	1	
+30	お花模様のTバックパンティ	1	
+31	ピンクのTバックパンティ	1	
+32	カモ柄のTバックパンティ	1	
+33	フルバックのパンティ	1	
+34	マイクロTバックパンティ	1	
+35	アナルジュエリー	3	
+36	ピンクでレースのTバックパンティ	1	
+37	ペイズリー柄のTバックパンティ	1	
+38	ユニセックスなTバックパンティ	1	
+
+
+localhost/siteyuh/associate/		http://siteyuh.s1001.xrea.com/log/phpmyadmin/sql.php?server=1&db=siteyuh&table=associate&pos=0
+ Showing rows 0 - 37 (38 total, Query took 0.0024 seconds.)
+
+SELECT event.eventid, category.categoryid,  category.jname AS 'category', event.eventname,  event.carousel, event.disp
+FROM associate, event, category 
+WHERE event.eventid = associate.eventid 
+AND category.categoryid = associate.categoryid
+AND event.disp = 1
+
+
+eventid	categoryid	category	eventname	carousel	disp	
+1	3	イベント関連	LEOフォトセッション	https://lh3.googleusercontent.com/uvYrUsO_RhjwtHyX...	1	
+2	3	イベント関連	2007年ホノルルマラソン	https://lh3.googleusercontent.com/Vyg1i_C7Cz3WezHe...	1	
+3	2	スイムファッション	トップモードジャパンのマイクロビキニ	https://lh3.googleusercontent.com/gwav63gG372ATOn5...	1	
+4	1	パンティコレクション	上向き収納のパンティ	https://lh3.googleusercontent.com/WvxSIjKV2IdqAPXl...	1	
+5	1	パンティコレクション	メンズビキニドットコムの極小パンティ	https://lh3.googleusercontent.com/LfMn8fsGnQ_zyCIb...	1	
+6	3	イベント関連	エネマグラを使っておしりでオナニー	https://lh3.googleusercontent.com/y4rSc2BV3Jyqe4QL...	1	
+7	1	パンティコレクション	上向き収納のメタリックなGスト	https://lh3.googleusercontent.com/OaHPqaBWdx_CyRM7...	1	
+8	1	パンティコレクション	中まで丸見え網パンティ	https://lh3.googleusercontent.com/nFqxdzDKE3RqCv6E...	1	
+9	2	スイムファッション	トップモードジャパンのGストの水着	https://lh3.googleusercontent.com/Y1oJlnfyb2G-3Miv...	1	
+10	2	スイムファッション	M&apos;sの白いビキニ	https://lh3.googleusercontent.com/ULeRlbjgCcIdYSZA...	1	
+11	1	パンティコレクション	レパード柄のGストのパンティ	https://lh3.googleusercontent.com/VnjbwUA8IiZzjLaJ...	1	
+12	3	イベント関連	コックリングでパンプアップ	https://lh3.googleusercontent.com/1KBxHxALVNei8Zib...	1	
+13	3	イベント関連	プチ露出で興奮	https://lh3.googleusercontent.com/3HaGkZaJEcpWJ4FW...	1	
+14	1	パンティコレクション	隠すところは最小限なパンティ	https://lh3.googleusercontent.com/mz0KEfrJ0ISDJNnz...	1	
+15	1	パンティコレクション	PPGの普通のTバックパンティ	https://lh3.googleusercontent.com/VbZEBOjUKjNDc6K5...	1	
+16	2	スイムファッション	EGDEのサイドレースのビキニ	https://lh3.googleusercontent.com/kYT-1U1RdULyXKfF...	1	
+17	2	スイムファッション	ちっちゃいリオバックビキニ	https://lh3.googleusercontent.com/KcB2NZo3YMznn9x1...	1	
+18	1	パンティコレクション	オーソドックスなGストのパンティ	https://lh3.googleusercontent.com/d7Bgt8am3S5ZjX-V...	1	
+19	1	パンティコレクション	TM製オレンジ色のGストのパンティ	https://lh3.googleusercontent.com/Zd6CwElAltj0mn6J...	1	
+20	1	パンティコレクション	サスペンダータイプのパンティ	https://lh3.googleusercontent.com/NSfjI7fjEvTwe_6r...	1	
+21	1	パンティコレクション	TopModeJapanのブルーのTバック	https://lh3.googleusercontent.com/S08mE3eKwhJwEvv4...	1	
+22	2	スイムファッション	Tバックのスイムビキニ	https://lh3.googleusercontent.com/ORKwLI_MXbgiHCX2...	1	
+23	1	パンティコレクション	サイドメッシュのビキニパンティ	https://lh3.googleusercontent.com/vROrSYhQxDwheqB9...	1	
+24	2	スイムファッション	3cmクロッチのリオバックビキニ	https://lh3.googleusercontent.com/fUhHstqF5emmUJNy...	1	
+25	1	パンティコレクション	レディスっぽいハーフバックパンティ	https://lh3.googleusercontent.com/jr3yFifKtAcon5Y3...	1	
+26	1	パンティコレクション	前向きなGストリングパンティ	https://lh3.googleusercontent.com/4ZBF5xkYIBDu36z3...	1	
+27	1	パンティコレクション	上向き収納の白いGスト	https://lh3.googleusercontent.com/--J1Cs8yA_YUlfVL...	1	
+28	1	パンティコレクション	和柄の上向きGストパンティ	https://lh3.googleusercontent.com/tVD75sig_zgq7Pu7...	1	
+29	1	パンティコレクション	すけすけネットのGストパンティ	https://lh3.googleusercontent.com/yK6iFCTvBWpMHV1O...	1	
+30	1	パンティコレクション	お花模様のTバックパンティ	https://lh3.googleusercontent.com/X7_Gzc3KmySAKOtl...	1	
+31	1	パンティコレクション	ピンクのTバックパンティ	https://lh3.googleusercontent.com/bF9Hwaa3Muxfhrir...	1	
+32	1	パンティコレクション	カモ柄のTバックパンティ	https://lh3.googleusercontent.com/Lku1KbEdJXEd18BX...	1	
+33	1	パンティコレクション	フルバックのパンティ	https://lh3.googleusercontent.com/9EVlPSolwrf9SXi-...	1	
+34	1	パンティコレクション	マイクロTバックパンティ	https://lh3.googleusercontent.com/ryPe68lrt4qZa3is...	1	
+35	3	イベント関連	アナルジュエリー	https://lh3.googleusercontent.com/pqUUXbexp5MX2Qdt...	1	
+36	1	パンティコレクション	ピンクでレースのTバックパンティ	https://lh3.googleusercontent.com/_NMIOCI1GaWRzqB3...	1	
+37	1	パンティコレクション	ペイズリー柄のTバックパンティ	https://lh3.googleusercontent.com/n15COVj0rqTEj2y3...	1	
+38	1	パンティコレクション	ユニセックスなTバックパンティ	https://lh3.googleusercontent.com/EzZYh9KeyUF6oz9U...	1	
+
+localhost/siteyuh/category/		http://siteyuh.s1001.xrea.com/log/phpmyadmin/sql.php?server=1&db=siteyuh&table=category&pos=0
+ Showing rows 0 -  2 (3 total, Query took 0.0002 seconds.)
+
+SELECT `category`.categoryid, `category`.jname, `category`.jdescribe FROM `category`
+
+
+categoryid	jname	jdescribe	
+1	パンティコレクション	エロ下着が好きで、もうコレクション化しています。	
+2	スイムファッション	泳ぐときの水着はスーパービキニタイプ。リゾートでは露出多め。	
+3	イベント関連	オナニーしたり、オナニーしたり。たまに旅行。	
+

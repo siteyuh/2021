@@ -1,0 +1,758 @@
+/* 640px以下のスクリーン */
+@import url('small.css') screen and (max-width: 640px);
+
+/* 大きいスクリーン */
+@import url('big.css') print, screen and (min-width: 641px);
+
+/* ダークモード */
+@media (prefers-color-scheme: dark) {
+  html {
+    color: #ddd;
+  }
+
+  header {
+    background-color: rgba(157, 111, 21, 0.9);
+  }
+  body, footer {
+    background-color: #966a13;
+  }
+
+  main {
+    background-color: #484848;
+  }
+
+  #cat .catmem {
+    background-color: #808080;
+  }
+
+  #announce {
+    background-color: #1c325a;
+    color: #ddd;
+  }
+
+  #profile, #information, #mailform, #menu {
+    background-color: rgba(50, 50, 50, 0.9);
+    color: #ccc;
+  }
+
+  #profile a,　#information a, #mailform a, #menu a {}
+
+  a {
+    color: #52afff;
+  }
+
+  img {
+    filter: grayscale(30%);
+  }
+
+  a[target="_blank"] {
+    background-image: url('hrefdark.svg');
+  }
+
+  #profile ul.contents li {
+    background-image: url('profbulletdark.svg');
+  }
+
+  #eventlist li,
+  #catevents li {
+    background-image: url('libulletdark.svg');
+  }
+
+  #information dt {
+    background-image: url('profbulletdark.svg');
+  }
+
+  #mailform li {
+    background-image: url('libulletdark.svg');
+  }
+  
+  #mailform input[type=text], #mailform input[type=email], #mailform textarea, #mailform .submitbutton {
+    color: #fff;
+  }
+  #mailform .submitbutton {
+    border-color: #fff;
+    background-color: #000!important;
+  }
+
+  .closedlg {
+    background-image: url('closedlgdark.svg');
+  }
+
+  .closebtn {
+    background-image: url('closedark.svg');
+  }
+}
+
+/* ライトモード */
+@media (prefers-color-scheme: light) {
+  html {
+    color: #222;
+  }
+
+  header, body, footer {
+    background-color: rgba(251, 174, 23, 0.9);
+
+  }
+
+  main {
+    background-color: #fff;
+  }
+
+  #cat .catmem {
+    background-color: #e6e6e6;
+  }
+
+  #announce {
+    background-color: #3F71CC;
+    color: #fff;
+  }
+
+  #profile, #information, #mailform, #menu {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  a {
+    color: #3F71CC;
+  }
+
+  #menu a {
+    color: #000;
+  }
+
+  a[target="_blank"] {
+    background-image: url('href.svg');
+  }
+
+  #profile ul.contents li {
+    background-image: url('profbullet.svg');
+  }
+
+  #eventlist li, #catevents li {
+    background-image: url('libullet.svg');
+  }
+
+  #information dt {
+    background-image: url('profbullet.svg');
+  }
+
+  #mailform li {
+    background-image: url('libullet.svg');
+  }
+
+  .closedlg {
+    background-image: url('closedlg.svg');
+  }
+
+  .closebtn {
+    background-image: url('close.svg');
+  }
+
+  #mesform div {
+    border-color: #000;
+  }
+  #mesform label {
+    color: #000;
+  }
+  .submitbutton {
+    border-color: #000;
+    background-color: #fff;
+  }
+
+}
+
+/* 共通 */
+* {
+  text-decoration: none;
+  -webkit-text-size-adjust: none;/* Chrome84からは必須 実際より小さく表示されるため */
+  text-size-adjust: none;/* Chrome84からは必須 実際より小さく表示されるため */
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif;
+}
+
+a {
+  /*  color: #3F71CC;*/
+}
+
+a[target="_blank"] {
+  padding-right: 15px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 12px;
+}
+
+main {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  /*  height: 100%;*/
+  top: 0;
+  left: 0;
+}
+
+header {
+  position: sticky;
+  z-index: 20;
+  height: 53px;
+
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0px 0px 8px;
+  /*  margin: 0;*/
+}
+
+header #logo {
+  vertical-align: text-top;
+}
+
+header h1 {
+  /*  display: inline;*/
+  position: absolute;
+  top: -2px;
+  left: 87px;
+}
+
+header nav {
+  padding: 8px 12px;
+  margin: 0;
+  /*
+  width: 50px;
+  height: 50px;
+*/
+  cursor: pointer;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 1px #fff;
+  /*
+  width: 66px;
+  height: 66px;
+*/
+}
+
+#avatar {
+  /*  position: absolute;
+  top: 14px;
+  left: 14px;*/
+}
+
+/* -------------
+      Slick 
+------------- */
+#gallery {
+  width: 100%;
+  background-color: #474747;
+  position: relative;
+}
+
+#gallery a {
+  outline: none;
+}
+
+#gallery .carousel {
+  /*  width: calc( 100% - 50px );*/
+  margin: auto;
+  overflow: hidden;
+}
+
+#gallery .slick-arrow {
+  z-index: 15;
+  /*margin-top: -38px;   高さの半分だけネガティブマージン */
+}
+
+#gallery #arrows .slick-next,
+#gallery #arrows .slick-prev {
+  width: 50px;
+  height: 48px;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+#gallery #arrows .slick-prev:before,
+#gallery #arrows .slick-next:before {
+  content: '';
+}
+
+#gallery #arrows .slick-next {
+  right: 0px;
+}
+
+#gallery #arrows .slick-next img {
+  transform: scaleX(-1);
+  /* 画像だけをミラー反転 */
+  transition: 0s;
+  /*  top: calc( 50% - 51px );*/
+}
+
+#gallery #arrows .slick-prev {
+  left: 0px;
+}
+
+
+
+.slick-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel img {
+  /*  border: #000 1px solid;*/
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#gallery .title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /*  background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));*/
+  background-color: rgba(0, 0, 0, .75);
+  color: #fff;
+  padding: 12px 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 1em;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* ---------------------- */
+
+#cat {
+  top: 42px;
+  width: min(100%, 960px);
+  margin: 25px auto;
+}
+
+#cat img:not(.slick-next) {
+  display: block;
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  margin-bottom: 25px;
+  transition: 0.8s;
+
+}
+
+#cat .catmem {
+  display: none;
+
+  padding: 25px;
+}
+
+#cat .cattitle {
+  font-size: 1.3em;
+  font-feature-settings: 'palt';
+}
+
+
+.catdescri {
+  font-feature-settings: 'palt';
+}
+
+#announce {
+
+  padding: 1px;
+}
+
+#announce p {
+  text-align: center;
+  font-size: 0.75rem;
+}
+#announce p span {
+  font-size: 0.75rem;
+}
+footer {
+  height: 50px;
+}
+
+footer .wrapper,
+#catevents .wrapper,
+#photomember .wrapper,
+#eventlist .wrapper,
+#catevents .wrapper,
+#photomember .small,
+#sent .wrapper {
+  margin: auto;
+}
+
+footer .wrapper {
+  position: relative;
+  padding-top: 15px;
+}
+
+footer .sm {
+  position: absolute;
+  top: -27px;
+  right: 0px;
+  width: 158px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul {
+  list-style: none;
+}
+
+#gallery img {
+  transition: 0.8s;
+}
+
+ul.thumbnails {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul.thumbnails li {
+  width: calc(99% / 3);
+  /*  margin-bottom: 1px;*/
+  margin: 0px 0.5px -1.5px;
+  overflow: hidden;
+}
+
+#photomember img {
+  width: 100%;
+  object-fit: cover;
+  transition: 0.8s;
+}
+
+#photomember .description {
+  text-align: justify;
+}
+
+#photomember .eventname {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+#photomember {
+  margin-bottom: 20px;
+}
+
+body {}
+
+#menu {
+  position: fixed;
+  z-index: 30;
+  right: 29px;
+  top: 14px;
+  width: 190px;
+  /*  height: 337px;*/
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #ccc;
+  display: none;
+}
+
+#menu ul.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu ul.links > li {
+  width: calc(100% - 16px);
+  padding: 8px 12px;
+  font-feature-settings: 'palt';
+}
+
+ul.i-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 32px 0 0 0;
+  list-style: none;
+}
+
+ul.i-contents > li {
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+#menu a {
+  width: 100%;
+  display: block;
+}
+
+.closebtn {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  padding: 14px;
+  background-position: center center;
+  background-size: 32px;
+  background-repeat: no-repeat;
+}
+
+.closebtn img {
+  width: 100%;
+
+}
+
+#eventlist ul,
+#catevents ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+#eventlist a,
+#catevents a {
+  display: block;
+  height: 100%;
+  padding: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-feature-settings: 'palt';
+}
+
+#eventlist li,
+#catevents li {
+  background-repeat: no-repeat;
+  background-size: 14px;
+  text-indent: 10px;
+  background-position: left center;
+}
+
+#photomember .small {
+  margin-top: -2em;
+  font-size: .75em;
+}
+
+#photomember .small a {
+  padding: 8px;
+}
+
+#catevents .title,
+#eventlist .title {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+#profile,
+#information,
+#mailform {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  overflow-y: scroll;
+  top: 50%;
+  left: 50%;
+  max-height: 80%;
+  /*  height: 80%;*/
+  transform: translate(-50%, -50%);
+
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 1px 1px 32px rgba(0, 0, 0, 0.5);
+}
+#sent {
+  height: calc( 100vh - 75px - 50px );
+  background-color: transparent;
+}
+#profile h2.title {
+  font-feature-settings: 'palt';
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 1px solid #3F71CC;
+  margin-bottom: 0px;
+}
+
+#profile ul {
+  list-style: none;
+  padding: 0;
+  text-align: justify;
+  font-feature-settings: 'palt';
+  line-height: 1.6em;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+#profile ul.contents li {
+  display: inline;
+  font-size: 14px;
+  padding: 4px 12px 4px 8px;
+  background-size: 6px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+#information dl {
+  font-size: 14px;
+}
+
+#information dt {
+  font-feature-settings: 'palt';
+  margin: 0;
+  padding-left: 14px;
+  padding-bottom: 0.5em;
+  background-position: left 2px;
+  background-repeat: no-repeat;
+  background-size: 8px;
+
+}
+
+#information dd {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.closedlg {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+}
+
+
+#menu .title {
+  font-weight: 900;
+  padding: 4px 8px;
+  margin: 60px 0px 0px 0px;
+}
+
+ul.links .blocked {
+  margin-left: 8px;
+}
+
+#mailform ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mailform li {
+  background-size: 14px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  /*  padding-left: 16px;*/
+  margin: 16px 0;
+}
+
+#mailform li a {
+  padding: 16px;
+}
+
+/* IE/Edge向け？ 
+html {
+  color: #222;
+}
+
+header,
+body,
+footer {
+  background-color: rgba(251, 174, 23, 0.9);
+
+}
+
+main {
+  background-color: #fff;
+}
+
+#cat .catmem {
+  background-color: #e6e6e6;
+}
+
+#announce {
+  background-color: #3F71CC;
+  color: #fff;
+}
+
+#profile,
+#information,
+#mailform,
+#menu {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+a {
+  color: #3F71CC;
+}
+
+#menu a {
+  color: #000;
+}
+
+a[target="_blank"] {
+  background-image: url('href.svg');
+}
+
+#profile ul.contents li {
+  background-image: url('profbullet.svg');
+}
+
+#eventlist li,
+#catevents li {
+  background-image: url('libullet.svg');
+}
+
+#information dt {
+  background-image: url('profbullet.svg');
+}
+
+#mailform li {
+  background-image: url('libullet.svg');
+}
+
+.closedlg {
+  background-image: url('closedlg.svg');
+}
+
+.closebtn {
+  background-image: url('close.svg');
+}
+*/
+#mesform input, #mesform textarea {
+  background-color: transparent;
+  border: none;
+  /* font-size: 16px; */
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+}
+#mesform div:not(.submit) {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+#mesform label {
+  width: 100%;
+  display: block;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+.submitbutton {
+  width: 100%;
+  padding: 8px;
+  border-style: solid;
+  border-width: 1px;
+  font-feature-settings: 'palt';
+  border-radius: 16px;
+}
+
+#mesform .submit {
+  margin: auto;
+  width: 50%;
+}
+
+.centered {
+  text-align: center;
+}
